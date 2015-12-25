@@ -79,7 +79,6 @@ function activateAnimations() {
       files = categories[category];
 
       for (file in files) {
-        console.log(files[file], file);
         target.push('source/' + category + '/' + files[file] + '.css');
         count += 1;
       }
@@ -89,7 +88,7 @@ function activateAnimations() {
   if (!count) {
     gutil.log('No animations activated.');
   } else {
-    gutil.log(count + (count > 1 ? ' animations' : ' animation') + ' activated.');
+    gutil.log(count + 'animation' + (count > 1 ? 's ' : ' ') + 'activated.');
   }
 
   return target;
