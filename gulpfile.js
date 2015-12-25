@@ -79,10 +79,9 @@ function activateAnimations() {
       files = categories[category];
 
       for (file in files) {
-        if (files.hasOwnProperty(file) && files[file]) {
-          target.push('source/' + category + '/' + file + '.css');
-          count += 1;
-        }
+        console.log(files[file], file);
+        target.push('source/' + category + '/' + files[file] + '.css');
+        count += 1;
       }
     }
   }
